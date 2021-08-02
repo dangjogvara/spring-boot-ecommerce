@@ -21,12 +21,8 @@ import com.dangjogvara.ecommerce.entity.ProductCategory;
 @Configuration
 public class MyDataRestConfig implements RepositoryRestConfigurer {
 
-	private EntityManager entityManager;
-
 	@Autowired
-	public MyDataRestConfig(EntityManager theEntityManager) {
-		entityManager = theEntityManager;
-	}
+	private EntityManager entityManager;
 
 	@Override
 	public void configureRepositoryRestConfiguration(RepositoryRestConfiguration config, CorsRegistry cors) {
